@@ -15,3 +15,11 @@ step 4:
 Show a dashboard of all the highscores 
 */ 
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav p #timer {
+    justify-content: end;
+}
