@@ -20,6 +20,11 @@ nav {
     flex-wrap: wrap;
 }
 
-nav p #timer {
-    justify-content: end;
+nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+#timer {
+    margin-left: 82vw;
 }

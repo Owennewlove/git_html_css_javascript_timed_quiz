@@ -9,6 +9,8 @@ function countdown() {
 
         if (timeLeft > 0 ) {
 
+            timer.textContent = ""
+
             timeLeft--;
 
             timerEl.textContent = "Time: " + timeLeft
