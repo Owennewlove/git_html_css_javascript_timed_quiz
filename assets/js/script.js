@@ -18,12 +18,17 @@ var button4 = document.createElement("button")
 var check = document.getElementById("check")
 
 
-function countdown() {
-    var timeLeft = 75;
-    
-    var timeInterval = setInterval(function() {
 
-        if (timeLeft > 0 ) {
+var checkTimer = 3;
+var timeLeft = 75;
+
+function countdown() {
+    
+
+    var timeInterval = setInterval(function () {
+
+
+        if (timeLeft > 0) {
 
             timer.textContent = ""
 
@@ -34,29 +39,31 @@ function countdown() {
 
         }
 
-       
+
+
 
 
 
     }, 1000);
 }
 
-startEl.addEventListener("click", function() {
+
+startEl.addEventListener("click", function () {
     console.log("click")
 
     question.textContent = "Commonly used data types do NOT include:"
     startEl.remove();
     statement.remove();
 
-    page1.appendChild(listEl);
-    listEl.appendChild(li1);
-    listEl.appendChild(li2);
-    listEl.appendChild(li3);
-    listEl.appendChild(li4);
-    li1.appendChild(button1);
-    li2.appendChild(button2);
-    li3.appendChild(button3);
-    li4.appendChild(button4);
+    page1.appendChild(listEl).innerHTML;
+    listEl.appendChild(li1).innerHTML;
+    listEl.appendChild(li2).innerHTML;
+    listEl.appendChild(li3).innerHTML;
+    listEl.appendChild(li4).innerHTML;
+    li1.appendChild(button1).innerHTML;
+    li2.appendChild(button2).innerHTML;
+    li3.appendChild(button3).innerHTML;
+    li4.appendChild(button4).innerHTML;
     listEl.setAttribute("style", "list-style: none; margin-top: 60px; text-align: start;");
     button1.textContent = "boolean"
     button2.textContent = "strings"
@@ -74,6 +81,7 @@ startEl.addEventListener("click", function() {
     button2.setAttribute("id", "button2")
     button3.setAttribute("id", "button3")
     button4.setAttribute("id", "button4")
+    var firstButton = document.getElementById("button1");
 
 
 
@@ -81,9 +89,12 @@ startEl.addEventListener("click", function() {
 
     countdown();
 
-    listEl.addEventListener("click", function(ev) {
-        var checkTimer = 3;
-        var correctInterval = setInterval(function() {
+
+
+    firstButton.addEventListener("click", function () {
+            
+        console.log("button 1 clicked")
+        var correctInterval = setInterval(function () {
             if (checkTimer > 0) {
                 check.textContent = "Correct";
                 checkTimer--;
@@ -91,29 +102,103 @@ startEl.addEventListener("click", function() {
             else {
                 check.textContent = "";
             }
-
-        },1000);
-
-        if (ev.currentTarget.id = "button1"){
-            correctInterval;
-            console.log("button 1 clicked")
-            
-
-
-        }
-
         
+        }, 1000);
+    
+        checkTimer = 3
+    
+    
+    });
+    
+    button2.addEventListener("click", function () {
         
+        var checkTimer = 3;
+        console.log("button 2 clicked")
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer --;
+            }
+            else {
+                check.textContent = "";
+            }
         
+        }, 1000);
+        checkTimer = 3
+        timeLeft -=15;
+    
+    });
+    
+    button3.addEventListener("click", function () {
+       
+        console.log("button 1 clicked")
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer --;
+            }
+            else {
+                check.textContent = "";
+            }
         
-
+        }, 1000);
+    
+    });
+    
+    button4.addEventListener("click", function () {
+        
+        console.log("button 4 clicked")
+    
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer --;
+            }
+            else {
+                check.textContent = "";
+            }
+        
+        }, 1000);
+    
     });
 
-  
+
+
+
+
+
+
+
+
+
 
 });
 
 
+
+
+
+
+
+
+
+
+
+
+/*    if (ev.currentTarget.id = "button2") {
+            wrongInterval;
+            console.log("button 2 clicked")
+        }
+
+        if (ev.currentTarget.id = "button3") {
+            wrongInterval;
+            console.log("button 3 clicked")
+        }
+
+        if (ev.currentTarget.id = "button4") {
+            wrongInterval;
+            console.log("button 4 clicked")
+        }  */
 
 /* <section class="secondPage" data-state="hidden" >
             
