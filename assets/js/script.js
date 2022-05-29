@@ -65,6 +65,10 @@ startEl.addEventListener("click", function() {
     li2.setAttribute("style", "padding: 10px")
     li3.setAttribute("style", "padding: 10px")
     li4.setAttribute("style", "padding: 10px")
+    button1.setAttribute("style", "background-color: teal; color: white")
+    button2.setAttribute("style", "background-color: teal; color: white")
+    button3.setAttribute("style", "background-color: teal; color: white")
+    button4.setAttribute("style", "background-color: teal; color: white")
 
 
 
