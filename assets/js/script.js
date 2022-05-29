@@ -15,7 +15,8 @@ var button1 = document.createElement("button")
 var button2 = document.createElement("button")
 var button3 = document.createElement("button")
 var button4 = document.createElement("button")
-    
+var check = document.getElementById("check")
+
 
 function countdown() {
     var timeLeft = 75;
@@ -69,6 +70,10 @@ startEl.addEventListener("click", function() {
     button2.setAttribute("style", "background-color: teal; color: white")
     button3.setAttribute("style", "background-color: teal; color: white")
     button4.setAttribute("style", "background-color: teal; color: white")
+    button1.setAttribute("id", "button1")
+    button2.setAttribute("id", "button2")
+    button3.setAttribute("id", "button3")
+    button4.setAttribute("id", "button4")
 
 
 
@@ -76,9 +81,33 @@ startEl.addEventListener("click", function() {
 
     countdown();
 
-    if (button1.addEventListener("click", fucntion(){
+    listEl.addEventListener("click", function(ev) {
+        var checkTimer = 3;
+        var correctInterval = setInterval(function() {
+            if (checkTimer > 0) {
+                check.textContent = "Correct";
+                checkTimer--;
+            }
+            else {
+                check.textContent = "";
+            }
 
-    }))
+        },1000);
+
+        if (ev.currentTarget.id = "button1"){
+            correctInterval;
+            console.log("button 1 clicked")
+            
+
+
+        }
+
+        
+        
+        
+        
+
+    });
 
   
 
