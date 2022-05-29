@@ -28,3 +28,21 @@ nav ul {
 #timer {
     margin-left: 82vw;
 }
+
+.container {
+    margin-top: 140px;
+    background-color: blueviolet;
+    color: white
+}
+
+.startBtn {
+    margin-top: 60px;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+body {
+    background-color: powderblue;
+}

@@ -76,21 +76,24 @@ startEl.addEventListener("click", function() {
 
     countdown();
 
+    if (button1.addEventListener("click", fucntion(){
+
+    }))
+
   
 
 });
 
 
 
-      /* <section class="secondPage" data-state="hidden" >
+/* <section class="secondPage" data-state="hidden" >
             
-            <h2 class = "question">Commonly used data types do <bold>NOT</bold> include:</h2>
+<h2 class = "question">Commonly used data types do <bold>NOT</bold> include:</h2>
 
-            <ul class = "answers">
-                <li><button>boolean</button></li>
-                <li><button>strings</button></li>
-                <li><button>alerts</button></li>
-                <li><button>numbers</button></li>
-            </ul>
-
-        </section> */
+<ul class = "answers">
+<li><button>boolean</button></li>
+<li><button>strings</button></li>
+<li><button>alerts</button></li>
+<li><button>numbers</button></li>
+</ul>
+ </section> */
