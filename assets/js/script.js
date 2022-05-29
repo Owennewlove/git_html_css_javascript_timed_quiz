@@ -82,6 +82,9 @@ startEl.addEventListener("click", function () {
     button3.setAttribute("id", "button3")
     button4.setAttribute("id", "button4")
     var firstButton = document.getElementById("button1");
+    var secondButton = document.getElementById("button2");
+    var thirdButton = document.getElementById("button3");
+    var fourthButton = document.getElementById("button4");
 
 
 
@@ -110,7 +113,7 @@ startEl.addEventListener("click", function () {
     
     });
     
-    button2.addEventListener("click", function () {
+    secondButton.addEventListener("click", function () {
         
         var checkTimer = 3;
         console.log("button 2 clicked")
@@ -129,7 +132,7 @@ startEl.addEventListener("click", function () {
     
     });
     
-    button3.addEventListener("click", function () {
+    thirdButton.addEventListener("click", function () {
        
         console.log("button 1 clicked")
         var wrongInterval = setInterval(function () {
@@ -142,10 +145,13 @@ startEl.addEventListener("click", function () {
             }
         
         }, 1000);
+
+        timeLeft-=15;
+        checkTimer = 3;
     
     });
     
-    button4.addEventListener("click", function () {
+    fourthButton.addEventListener("click", function () {
         
         console.log("button 4 clicked")
     
@@ -159,6 +165,9 @@ startEl.addEventListener("click", function () {
             }
         
         }, 1000);
+
+        timeLeft -=15;
+        checkTimer = 3;
     
     });
 
