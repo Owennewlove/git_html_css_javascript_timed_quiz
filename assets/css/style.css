@@ -32,7 +32,8 @@ nav ul {
 .container {
     margin-top: 140px;
     background-color: blueviolet;
-    color: white
+    color: white;
+
 }
 
 .startBtn {
@@ -56,4 +57,31 @@ ul {
 
 ul li {
     padding: 10px;
+}
+
+.slide {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2;
+    background-color: blueviolet;
+}
+
+button {
+    margin: 20px;
+}
+
+.question {
+    font-size: 40px;
+    padding-left: 30px;
+}
+
+.answers {
+    margin-left: 80px;
 }

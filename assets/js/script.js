@@ -10,115 +10,14 @@ var firstButton = document.getElementById("button1");
 var secondButton = document.getElementById("button2");
 var thirdButton = document.getElementById("button3");
 var fourthButton = document.getElementById("button4");
-var setFifthButton = firstButton.setAttribute("id", "button5");
-var setSixthButton = secondButton.setAttribute("id", "button6");
-var setSeventhButton = thirdButton.setAttribute("id", "button7");
-var setEigthButton = fourthButton.setAttribute("id", "button8");
+var fifthButton = document.getElementById("button5");
+var sixthButton = document.getElementById("button6");
+var seventhButton = document.getElementById("button7");
+var eigthButton = document.getElementById("button8");
 
 
 var checkTimer = 3;
 var timeLeft = 75;
-
-function buildQuiz(){
-
-    const output = [];
-
-    myQuestions.forEach(
-        (currentQuestion, questionNumber) => {
-
-            const answers = [];
-
-            for (letter in currentQuestion.answers){
-
-                answers.push(
-                    `<label>
-                        <input type = "radio" name = "question${questionNumber}" value = "${letter}">
-                        ${letter} :
-                        ${currentQuestion.answers[letter]}
-                    </label>`
-                    
-                );
-            }
-
-            output.push(
-                `<div class = "question"> ${currentQuestion.question} </div>
-                <div class = "answers"> ${answers.join('')} </div>`
-            );
-        }
-    );
-
-    firstPage.innerHTML = output.join('');
-}
-
-const myQuestions = [
-    {
-        question: "Commonly used data types DO NOT include:",
-
-        answers: {
-            a: "strings",
-            b: "boolean",
-            c: "alerts",
-            d: "numbers"
-        },
-    },
-
-    {
-        question: "The condition in an if/else statement is enclosed within ______. ",
-
-        answers: {
-
-            a: "quotes",
-            b: "curly brackets",
-            c: "parentheses",
-            d: "square brackets"
-
-        },
-    },
-
-    {
-
-        question: "Arrays in JavaScript can be used to store _____.",
-
-        answers: {
-
-            a: "numbers and strings",
-            b: "other arrays",
-            c: "booleans",
-            d: "all of the above"
-        },
-
-    },
-
-    {
-        question: "String values must be enclosed within ______ when being assigned to variables.",
-
-        answers: {
-            a: "commas",
-            b: "curly brackets",
-            c: "quotes",
-            d: "parentheses"
-        },
-    },
-
-    {
-
-        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-
-        answers: {
-
-            a: "JavaScript",
-            b: "terminal/bash",
-            c: "for loops",
-            d: "console log"
-        }
-    }
-
-
-
-
-
-]
-
 
 
 
@@ -149,28 +48,51 @@ function countdown() {
 }
 
 
-startEl.addEventListener("click", function () {
+
+startEl.addEventListener('click', function () {
     console.log("click")
-
-    question.textContent = "Commonly used data types do NOT include:"
-    startEl.remove();
-    statement.remove();
-    firstButton.textContent = "boolean"
-    secondButton.textContent = "strings"
-    thirdButton.textContent = "alerts"
-    fourthButton.textContent = "numbers"
-    firstButton.setAttribute("style", "background-color: teal; color: white")
-    secondButton.setAttribute("style", "background-color: teal; color: white")
-    thirdButton.setAttribute("style", "background-color: teal; color: white")
-    fourthButton.setAttribute("style", "background-color: teal; color: white")
-
-
 
     countdown();
 
+ 
 
 
-    firstButton.addEventListener("click", function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+   /*firstButton.addEventListener("click", function () {
 
         console.log("button 1 clicked")
         var correctInterval = setInterval(function () {
@@ -186,30 +108,7 @@ startEl.addEventListener("click", function () {
 
         checkTimer = 3
 
-        setFifthButton;
-        setSixthButton;
-        setSeventhButton;
-        setEigthButton;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    });
-
-
-
-    secondButton.addEventListener("click", function () {
+         secondButton.addEventListener("click", function () {
 
         var checkTimer = 3;
         console.log("button 2 clicked")
@@ -270,26 +169,16 @@ startEl.addEventListener("click", function () {
 
 
 
+        setFifthButton;
+        setSixthButton;
+        setSeventhButton;
+        setEigthButton;
 
 
 
 
 
 
-
-
-
-
-
-
-});
-
-
-
-var fifthButton = document.getElementById("button5");
-var sixthButton = document.getElementById("button6");
-var seventhButton = document.getElementById("button7");
-var eigthButton = document.getElementById("button8");
 
 fifthButton.textContent = "quotes"
 sixthButton.textContent = "curly brackets"
@@ -317,7 +206,7 @@ fifthButton.addEventListener("clicked", function () {
 
 
 
-})
+})*/
 
 
 
@@ -355,3 +244,73 @@ fifthButton.addEventListener("clicked", function () {
 <li><button>numbers</button></li>
 </ul>
  </section> */
+
+
+ /*const myQuestions = [
+    {
+        question: "Commonly used data types DO NOT include:",
+
+        answers: {
+            1: "strings",
+            2: "boolean",
+            3: "alerts",
+            4: "numbers"
+        },
+    },
+
+    {
+        question: "The condition in an if/else statement is enclosed within ______. ",
+
+        answers: {
+
+            a: "quotes",
+            b: "curly brackets",
+            c: "parentheses",
+            d: "square brackets"
+
+        },
+    },
+
+    {
+
+        question: "Arrays in JavaScript can be used to store _____.",
+
+        answers: {
+
+            a: "numbers and strings",
+            b: "other arrays",
+            c: "booleans",
+            d: "all of the above"
+        },
+
+    },
+
+    {
+        question: "String values must be enclosed within ______ when being assigned to variables.",
+
+        answers: {
+            a: "commas",
+            b: "curly brackets",
+            c: "quotes",
+            d: "parentheses"
+        },
+    },
+
+    {
+
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+
+        answers: {
+
+            a: "JavaScript",
+            b: "terminal/bash",
+            c: "for loops",
+            d: "console log"
+        }
+    }
+
+
+
+
+
+]*/
