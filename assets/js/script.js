@@ -4,26 +4,98 @@ var startEl = document.querySelector(".startBtn");
 
 var page1 = document.querySelector(".firstPage");
 var questions = document.querySelector(".question");
-var statement = document.getElementById("startStatement")
-
-var listEl = document.createElement("ul");
-var li1 = document.createElement("li");
-var li2 = document.createElement("li");
-var li3 = document.createElement("li");
-var li4 = document.createElement("li");
-var button1 = document.createElement("button")
-var button2 = document.createElement("button")
-var button3 = document.createElement("button")
-var button4 = document.createElement("button")
-var check = document.getElementById("check")
-
+var statement = document.getElementById("startStatement");
+var check = document.getElementById("check");
+var firstButton = document.getElementById("button1");
+var secondButton = document.getElementById("button2");
+var thirdButton = document.getElementById("button3");
+var fourthButton = document.getElementById("button4");
+var setFifthButton = firstButton.setAttribute("id", "button5");
+var setSixthButton = secondButton.setAttribute("id", "button6");
+var setSeventhButton = thirdButton.setAttribute("id", "button7");
+var setEigthButton = fourthButton.setAttribute("id", "button8");
 
 
 var checkTimer = 3;
 var timeLeft = 75;
 
+
+
+const myQuestions = [
+    {
+        question: "Commonly used data types DO NOT include:",
+
+        answers: {
+            a: "strings",
+            b: "boolean",
+            c: "alerts",
+            d: "numbers"
+        },
+    },
+
+    {
+        question: "The condition in an if/else statement is enclosed within ______. ",
+
+        answers: {
+
+            a: "quotes",
+            b: "curly brackets",
+            c: "parentheses",
+            d: "square brackets"
+
+        },
+    },
+
+    {
+
+        question: "Arrays in JavaScript can be used to store _____.",
+
+        answers: {
+
+            a: "numbers and strings",
+            b: "other arrays",
+            c: "booleans",
+            d: "all of the above"
+        },
+
+    },
+
+    {
+        question: "String values must be enclosed within ______ when being assigned to variables.",
+
+        answers: {
+            a: "commas",
+            b: "curly brackets",
+            c: "quotes",
+            d: "parentheses"
+        },
+    },
+
+    {
+
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+
+        answers: {
+
+            a: "JavaScript",
+            b: "terminal/bash",
+            c: "for loops",
+            d: "console log"
+        }
+    }
+
+
+
+
+
+]
+
+
+
+
+
 function countdown() {
-    
+
 
     var timeInterval = setInterval(function () {
 
@@ -54,39 +126,14 @@ startEl.addEventListener("click", function () {
     question.textContent = "Commonly used data types do NOT include:"
     startEl.remove();
     statement.remove();
-
-    page1.appendChild(listEl).innerHTML;
-    listEl.appendChild(li1).innerHTML;
-    listEl.appendChild(li2).innerHTML;
-    listEl.appendChild(li3).innerHTML;
-    listEl.appendChild(li4).innerHTML;
-    li1.appendChild(button1).innerHTML;
-    li2.appendChild(button2).innerHTML;
-    li3.appendChild(button3).innerHTML;
-    li4.appendChild(button4).innerHTML;
-    listEl.setAttribute("style", "list-style: none; margin-top: 60px; text-align: start;");
-    button1.textContent = "boolean"
-    button2.textContent = "strings"
-    button3.textContent = "alerts"
-    button4.textContent = "numbers"
-    li1.setAttribute("style", "padding: 10px")
-    li2.setAttribute("style", "padding: 10px")
-    li3.setAttribute("style", "padding: 10px")
-    li4.setAttribute("style", "padding: 10px")
-    button1.setAttribute("style", "background-color: teal; color: white")
-    button2.setAttribute("style", "background-color: teal; color: white")
-    button3.setAttribute("style", "background-color: teal; color: white")
-    button4.setAttribute("style", "background-color: teal; color: white")
-    button1.setAttribute("id", "button1")
-    button2.setAttribute("id", "button2")
-    button3.setAttribute("id", "button3")
-    button4.setAttribute("id", "button4")
-    var firstButton = document.getElementById("button1");
-    var secondButton = document.getElementById("button2");
-    var thirdButton = document.getElementById("button3");
-    var fourthButton = document.getElementById("button4");
-
-
+    firstButton.textContent = "boolean"
+    secondButton.textContent = "strings"
+    thirdButton.textContent = "alerts"
+    fourthButton.textContent = "numbers"
+    firstButton.setAttribute("style", "background-color: teal; color: white")
+    secondButton.setAttribute("style", "background-color: teal; color: white")
+    thirdButton.setAttribute("style", "background-color: teal; color: white")
+    fourthButton.setAttribute("style", "background-color: teal; color: white")
 
 
 
@@ -95,7 +142,7 @@ startEl.addEventListener("click", function () {
 
 
     firstButton.addEventListener("click", function () {
-            
+
         console.log("button 1 clicked")
         var correctInterval = setInterval(function () {
             if (checkTimer > 0) {
@@ -105,71 +152,96 @@ startEl.addEventListener("click", function () {
             else {
                 check.textContent = "";
             }
-        
+
         }, 1000);
-    
+
         checkTimer = 3
-    
-    
+
+        setFifthButton;
+        setSixthButton;
+        setSeventhButton;
+        setEigthButton;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     });
-    
+
+
+
     secondButton.addEventListener("click", function () {
-        
+
         var checkTimer = 3;
         console.log("button 2 clicked")
         var wrongInterval = setInterval(function () {
             if (checkTimer > 0) {
                 check.textContent = "Wrong";
-                checkTimer --;
+                checkTimer--;
             }
             else {
                 check.textContent = "";
             }
-        
+
         }, 1000);
         checkTimer = 3
-        timeLeft -=15;
-    
+        timeLeft -= 15;
+
     });
-    
+
     thirdButton.addEventListener("click", function () {
-       
+
         console.log("button 1 clicked")
         var wrongInterval = setInterval(function () {
             if (checkTimer > 0) {
                 check.textContent = "Wrong";
-                checkTimer --;
+                checkTimer--;
             }
             else {
                 check.textContent = "";
             }
-        
+
         }, 1000);
 
-        timeLeft-=15;
+        timeLeft -= 15;
         checkTimer = 3;
-    
+
     });
-    
+
     fourthButton.addEventListener("click", function () {
-        
+
         console.log("button 4 clicked")
-    
+
         var wrongInterval = setInterval(function () {
             if (checkTimer > 0) {
                 check.textContent = "Wrong";
-                checkTimer --;
+                checkTimer--;
             }
             else {
                 check.textContent = "";
             }
-        
+
         }, 1000);
 
-        timeLeft -=15;
+        timeLeft -= 15;
         checkTimer = 3;
-    
+
     });
+
+
+
+
+
 
 
 
@@ -183,6 +255,40 @@ startEl.addEventListener("click", function () {
 
 });
 
+
+
+var fifthButton = document.getElementById("button5");
+var sixthButton = document.getElementById("button6");
+var seventhButton = document.getElementById("button7");
+var eigthButton = document.getElementById("button8");
+
+fifthButton.textContent = "quotes"
+sixthButton.textContent = "curly brackets"
+seventhButton.textContent = "parentheses"
+eigthButton.textContent = "square brackets"
+
+
+fifthButton.addEventListener("clicked", function () {
+
+    var wrongInterval = setInterval(function () {
+        if (checkTimer > 0) {
+            check.textContent = "Wrong";
+            checkTimer--;
+        }
+        else {
+            check.textContent = "";
+        }
+
+    }, 1000);
+    console.log("fifth button clicked")
+
+    checkTimer = 3;
+    timeLeft -= 15;
+
+
+
+
+})
 
 
 
