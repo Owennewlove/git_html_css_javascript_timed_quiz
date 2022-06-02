@@ -28,10 +28,12 @@ var finalScore = document.getElementById("finalScore")
 var initialEnterText = document.getElementById("initialEnter")
 var initialsEl = document.getElementById("initials")
 var submitEl = document.getElementById("submitButton")
+var scores = [];
 
 
 var checkTimer = 2;
 var timeLeft = 75;
+
 
 
 
@@ -285,7 +287,32 @@ tenthButton.addEventListener('click', function() {
     initialEnterText.textContent = "Please enter your initials to save your score"
 });
 
+function renderScores () {
 
+}
+
+function storeScores () {
+    localStorage.setItem("scores", JSON.stringify(scores));
+}
+
+submitEl.addEventListener("click", function(event) {
+    event.preventDefault();
+  
+    var initialsText = initialsEl.value.trim();
+  
+    // Return from function early if submitted todoText is blank
+    if (initialsText === "") {
+      return;
+    }
+  
+    // Add new todoText to todos array, clear the input
+    scores.push(initialsText, timeLeft);
+    initialsEl.value = "";
+  
+    // Store updated todos in localStorage, re-render the list
+    storeScores();
+    renderScores();
+});
 
    /*firstButton.addEventListener("click", function () {
 
