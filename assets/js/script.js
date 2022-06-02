@@ -9,6 +9,7 @@ var page4 = document.querySelector(".fourthPage");
 var page5 = document.querySelector(".fifthPage");
 var page6 = document.querySelector(".sixthPage");
 var page7 = document.querySelector(".seventhPage");
+var page8 = document.querySelector(".eigthPage");
 var pageAll = document.querySelectorAll("section")
 var questions = document.querySelector(".question");
 var statement = document.getElementById("startStatement");
@@ -24,10 +25,11 @@ var eigthButton = document.getElementById("button8");
 var ninthButtons = document.querySelectorAll("#button9");
 var tenthButton = document.getElementById("button10");
 var check = document.getElementById("check");
-var finalScore = document.getElementById("finalScore")
-var initialEnterText = document.getElementById("initialEnter")
-var initialsEl = document.getElementById("initials")
-var submitEl = document.getElementById("submitButton")
+var finalScore = document.getElementById("finalScore");
+var initialEnterText = document.getElementById("initialEnter");
+var initialsEl = document.getElementById("initials");
+var submitEl = document.getElementById("submitButton");
+var highscoreButton = document.getElementById("highscore")
 var scores = [];
 
 
@@ -289,6 +291,33 @@ tenthButton.addEventListener('click', function() {
 
 function renderScores () {
 
+        // Clear todoList element and update todoCountSpan
+        page8.innerHTML = "";
+      
+        // Render a new li for each todo
+        for (var i = 0; i < scores.length; i++) {
+          var score = scores[i];
+      
+          var li = document.createElement("li");
+          li.textContent = score;
+          li.setAttribute("data-index", i);
+          page8.appendChild(li);
+
+        }
+
+}
+
+function init() {
+    // Get stored todos from localStorage
+    var storedScores = JSON.parse(localStorage.getItem("scores"));
+  
+    // If todos were retrieved from localStorage, update the todos array to it
+    if (storedScores !== null) {
+      scores = storedScores;
+    }
+  
+    // This is a helper function that will render todos to the DOM
+    renderScores();
 }
 
 function storeScores () {
@@ -313,6 +342,21 @@ submitEl.addEventListener("click", function(event) {
     storeScores();
     renderScores();
 });
+
+highscoreButton.addEventListener("click", function() {
+    page1.style.display = "none"
+    page2.style.display = "none"
+    page3.style.display = "none"
+    page4.style.display = "none"
+    page5.style.display = "none"
+    page6.style.display = "none"
+    page7.style.display = "none"
+    page8.style.display = "block"
+
+
+})
+
+init();
 
    /*firstButton.addEventListener("click", function () {
 
