@@ -12,14 +12,16 @@ var pageAll = document.querySelectorAll("section")
 var questions = document.querySelector(".question");
 var statement = document.getElementById("startStatement");
 var check = document.getElementById("check");
-const firstButtons = document.querySelectorAll("#button1");
+var firstButtons = document.querySelectorAll("#button1");
 var secondButton = document.getElementById("button2");
 var thirdButtons = document.querySelectorAll("#button3")
 var fourthButton = document.getElementById("button4");
-var fifthButton = document.getElementById("button5");
+var fifthButtons = document.querySelectorAll("#button5");
 var sixthButton = document.getElementById("button6");
-var seventhButton = document.getElementById("button7");
+var seventhButtons = document.querySelectorAll("#button7");
 var eigthButton = document.getElementById("button8");
+var ninthButtons = document.querySelectorAll("#button9");
+var tenthButton = document.getElementById("button10");
 var check = document.getElementById("check");
 
 
@@ -130,6 +132,120 @@ thirdButtons.forEach (button3 => {
 fourthButton.addEventListener('click', function() {
     page3.style.display = "none"
     page4.style.display = "block"
+    var correctInterval = setInterval(function () {
+        if (checkTimer > 0) {
+            check.textContent = "Correct";
+            checkTimer--;
+        }
+        else {
+            check.textContent = "";
+        }
+
+    }, 1000);
+
+    checkTimer = 3
+});
+
+fifthButtons.forEach (button5 => {
+    button5.addEventListener('click', function() {
+        page4.style.display = "none"
+        page5.style.display = "block"
+        timeLeft -= 15
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer--;
+            }
+            else {
+                check.textContent = "";
+            }
+    
+        }, 1000);
+        checkTimer = 3
+    });
+
+})
+
+
+sixthButton.addEventListener('click', function() {
+    page4.style.display = "none"
+    page5.style.display = "block"
+    var correctInterval = setInterval(function () {
+        if (checkTimer > 0) {
+            check.textContent = "Correct";
+            checkTimer--;
+        }
+        else {
+            check.textContent = "";
+        }
+
+    }, 1000);
+
+    checkTimer = 3
+});
+
+seventhButtons.forEach (button7 => {
+    button7.addEventListener('click', function() {
+        page5.style.display = "none"
+        page6.style.display = "block"
+        timeLeft -= 15
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer--;
+            }
+            else {
+                check.textContent = "";
+            }
+    
+        }, 1000);
+        checkTimer = 3
+    });
+
+})
+
+
+eigthButton.addEventListener('click', function() {
+    page5.style.display = "none"
+    page6.style.display = "block"
+    var correctInterval = setInterval(function () {
+        if (checkTimer > 0) {
+            check.textContent = "Correct";
+            checkTimer--;
+        }
+        else {
+            check.textContent = "";
+        }
+
+    }, 1000);
+
+    checkTimer = 3
+});
+
+ninthButtons.forEach (button9 => {
+    button9.addEventListener('click', function() {
+        page6.style.display = "none"
+        page1.style.display = "block"
+        timeLeft -= 15
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer--;
+            }
+            else {
+                check.textContent = "";
+            }
+    
+        }, 1000);
+        checkTimer = 3
+    });
+
+})
+
+
+tenthButton.addEventListener('click', function() {
+    page6.style.display = "none"
+    page1.style.display = "block"
     var correctInterval = setInterval(function () {
         if (checkTimer > 0) {
             check.textContent = "Correct";
