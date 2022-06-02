@@ -29,10 +29,14 @@ nav ul {
     margin-left: 82vw;
 }
 
-.container {
+.row {
+    
     margin-top: 140px;
-    background-color: blueviolet;
-    color: white;
+    
+    position: relative;
+
+
+
 
 }
 
@@ -59,29 +63,58 @@ ul li {
     padding: 10px;
 }
 
-.slide {
+.firstPage {
+    position: absolute;
+    z-index: 5;
+    background-color: blueviolet;
+    color: white;
+
+
+
+}
+
+.secondPage {
+    position: absolute;
+    z-index: 4;
+    display: none;
+    background-color: blueviolet;
+    color: white;
+
+
+}
+
+.thirdPage {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    background-color: blueviolet;
+    color: white;
+
+}
+
+.fourthPage {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    background-color: blueviolet;
+    color: white;
+
+}
+
+.fifthPage {
     position: absolute;
     z-index: 1;
-    opacity: 0;
-    transition: opacity 0.5s;
-
-}
-
-.active-slide {
-    opacity: 1;
-    z-index: 2;
+    display: none;
     background-color: blueviolet;
+    color: white;
+
 }
 
-button {
-    margin: 20px;
-}
+.sixthPage {
+    position: absolute;
+    z-index: 0;
+    display: none;
+    background-color: blueviolet;
+    color: white;
 
-.question {
-    font-size: 40px;
-    padding-left: 30px;
-}
-
-.answers {
-    margin-left: 80px;
 }

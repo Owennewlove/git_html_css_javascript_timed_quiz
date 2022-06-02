@@ -3,6 +3,12 @@ var timerEl = document.getElementById('timer');
 var startEl = document.querySelector(".startBtn");
 
 var page1 = document.querySelector(".firstPage");
+var page2 = document.querySelector(".secondPage");
+var page3 = document.querySelector(".thirdPage");
+var page4 = document.querySelector(".fourthPage");
+var page5 = document.querySelector(".fifthPage");
+var page6 = document.querySelector(".sixthPage");
+var pageAll = document.querySelectorAll("section")
 var questions = document.querySelector(".question");
 var statement = document.getElementById("startStatement");
 var check = document.getElementById("check");
@@ -14,6 +20,7 @@ var fifthButton = document.getElementById("button5");
 var sixthButton = document.getElementById("button6");
 var seventhButton = document.getElementById("button7");
 var eigthButton = document.getElementById("button8");
+
 
 
 var checkTimer = 3;
@@ -54,41 +61,15 @@ startEl.addEventListener('click', function () {
 
     countdown();
 
+    page1.style.display = "none"
+    page2.style.display = "block"
+
  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
+
+
 
 
 
