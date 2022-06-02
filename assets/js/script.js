@@ -291,8 +291,6 @@ tenthButton.addEventListener('click', function() {
 
 function renderScores () {
 
-        // Clear todoList element and update todoCountSpan
-        page8.innerHTML = "";
       
         // Render a new li for each todo
         for (var i = 0; i < scores.length; i++) {
@@ -334,11 +332,11 @@ submitEl.addEventListener("click", function(event) {
       return;
     }
   
-    // Add new todoText to todos array, clear the input
-    scores.push(initialsText, timeLeft);
+    // Add new initials and score to todos array, clear the input
+    scores.push(initialsText + "           " +timeLeft);
     initialsEl.value = "";
   
-    // Store updated todos in localStorage, re-render the list
+    // Store updated scores in localStorage, re-render the list
     storeScores();
     renderScores();
 });
