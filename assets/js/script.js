@@ -8,6 +8,7 @@ var page3 = document.querySelector(".thirdPage");
 var page4 = document.querySelector(".fourthPage");
 var page5 = document.querySelector(".fifthPage");
 var page6 = document.querySelector(".sixthPage");
+var page7 = document.querySelector(".seventhPage");
 var pageAll = document.querySelectorAll("section")
 var questions = document.querySelector(".question");
 var statement = document.getElementById("startStatement");
@@ -23,6 +24,9 @@ var eigthButton = document.getElementById("button8");
 var ninthButtons = document.querySelectorAll("#button9");
 var tenthButton = document.getElementById("button10");
 var check = document.getElementById("check");
+var finalScore = document.getElementById("finalScore")
+var initialEnterText = document.getElementById("initialEnter")
+var initialsEL = document.getElementById("initials")
 
 
 var checkTimer = 2;
@@ -240,7 +244,7 @@ eigthButton.addEventListener('click', function() {
 ninthButtons.forEach (button9 => {
     button9.addEventListener('click', function() {
         page6.style.display = "none"
-        page1.style.display = "block"
+        page7.style.display = "block"
         timeLeft -= 15
         var wrongInterval = setInterval(function () {
             if (checkTimer > 0) {
@@ -253,6 +257,8 @@ ninthButtons.forEach (button9 => {
     
         }, 1000);
         checkTimer = 2
+        finalScore.textContent = "Your score is: " + timeLeft
+        initialEnterText.textContent = "Please enter your initials to save your score"
     });
 
 })
@@ -261,7 +267,7 @@ ninthButtons.forEach (button9 => {
 tenthButton.addEventListener('click', function() {
     clearInterval(countdown);
     page6.style.display = "none"
-    page1.style.display = "block"
+    page7.style.display = "block"
     var correctInterval = setInterval(function () {
         if (checkTimer > 0) {
             check.textContent = "Correct";
@@ -274,7 +280,10 @@ tenthButton.addEventListener('click', function() {
     }, 1000);
 
     checkTimer = 2
+    finalScore.textContent = "Your score is: " + timeLeft
+    initialEnterText.textContent = "Please enter your initials to save your score"
 });
+
 
 
    /*firstButton.addEventListener("click", function () {
