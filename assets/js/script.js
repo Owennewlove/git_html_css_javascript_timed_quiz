@@ -25,7 +25,7 @@ var tenthButton = document.getElementById("button10");
 var check = document.getElementById("check");
 
 
-var checkTimer = 3;
+var checkTimer = 2;
 var timeLeft = 75;
 
 
@@ -101,7 +101,7 @@ firstButtons.forEach (button1 => {
             }
     
         }, 1000);
-        checkTimer = 3
+        checkTimer = 2
     });
 });
 
@@ -120,7 +120,7 @@ secondButton.addEventListener('click', function() {
 
     }, 1000);
 
-    checkTimer = 3
+    checkTimer = 2
 });
 
 thirdButtons.forEach (button3 => {
@@ -138,7 +138,7 @@ thirdButtons.forEach (button3 => {
             }
     
         }, 1000);
-        checkTimer = 3
+        checkTimer = 2
     });
 
 })
@@ -158,7 +158,7 @@ fourthButton.addEventListener('click', function() {
 
     }, 1000);
 
-    checkTimer = 3
+    checkTimer = 2
 });
 
 fifthButtons.forEach (button5 => {
@@ -176,7 +176,7 @@ fifthButtons.forEach (button5 => {
             }
     
         }, 1000);
-        checkTimer = 3
+        checkTimer = 2
     });
 
 })
@@ -196,7 +196,7 @@ sixthButton.addEventListener('click', function() {
 
     }, 1000);
 
-    checkTimer = 3
+    checkTimer = 2
 });
 
 seventhButtons.forEach (button7 => {
@@ -214,7 +214,7 @@ seventhButtons.forEach (button7 => {
             }
     
         }, 1000);
-        checkTimer = 3
+        checkTimer = 2
     });
 
 })
@@ -234,7 +234,7 @@ eigthButton.addEventListener('click', function() {
 
     }, 1000);
 
-    checkTimer = 3
+    checkTimer = 2
 });
 
 ninthButtons.forEach (button9 => {
@@ -252,7 +252,7 @@ ninthButtons.forEach (button9 => {
             }
     
         }, 1000);
-        checkTimer = 3
+        checkTimer = 2
     });
 
 })
@@ -273,7 +273,7 @@ tenthButton.addEventListener('click', function() {
 
     }, 1000);
 
-    checkTimer = 3
+    checkTimer = 2
 });
 
 
