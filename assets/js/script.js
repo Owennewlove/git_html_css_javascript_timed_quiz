@@ -333,7 +333,7 @@ submitEl.addEventListener("click", function(event) {
     }
   
     // Add new initials and score to todos array, clear the input
-    scores.push(initialsText + "           " +timeLeft);
+    scores.push(initialsText + "    Score:     " +timeLeft);
     initialsEl.value = "";
   
     // Store updated scores in localStorage, re-render the list
