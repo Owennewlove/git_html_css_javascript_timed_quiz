@@ -26,7 +26,8 @@ var tenthButton = document.getElementById("button10");
 var check = document.getElementById("check");
 var finalScore = document.getElementById("finalScore")
 var initialEnterText = document.getElementById("initialEnter")
-var initialsEL = document.getElementById("initials")
+var initialsEl = document.getElementById("initials")
+var submitEl = document.getElementById("submitButton")
 
 
 var checkTimer = 2;
