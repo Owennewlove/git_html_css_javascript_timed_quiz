@@ -128,3 +128,12 @@ ul li {
     color: white;
 
 }
+
+.seventhPage {
+    position: absolute;
+    z-index: 0;
+    display: none;
+    background-color: blueviolet;
+    color: white;
+
+}
