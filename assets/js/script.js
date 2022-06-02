@@ -12,15 +12,15 @@ var pageAll = document.querySelectorAll("section")
 var questions = document.querySelector(".question");
 var statement = document.getElementById("startStatement");
 var check = document.getElementById("check");
-var firstButton = document.getElementById("button1");
+const firstButtons = document.querySelectorAll("#button1");
 var secondButton = document.getElementById("button2");
-var thirdButton = document.getElementById("button3");
+var thirdButtons = document.querySelectorAll("#button3")
 var fourthButton = document.getElementById("button4");
 var fifthButton = document.getElementById("button5");
 var sixthButton = document.getElementById("button6");
 var seventhButton = document.getElementById("button7");
 var eigthButton = document.getElementById("button8");
-
+var check = document.getElementById("check");
 
 
 var checkTimer = 3;
@@ -69,8 +69,80 @@ startEl.addEventListener('click', function () {
 
 });
 
+firstButtons.forEach (button1 => {
+    button1.addEventListener('click', function() {
+        page2.style.display = "none"
+        page3.style.display = "block"
+        timeLeft -= 15
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer--;
+            }
+            else {
+                check.textContent = "";
+            }
+    
+        }, 1000);
+        checkTimer = 3
+    });
+});
 
 
+secondButton.addEventListener('click', function() {
+    page2.style.display = "none"
+    page3.style.display = "block"
+    var correctInterval = setInterval(function () {
+        if (checkTimer > 0) {
+            check.textContent = "Correct";
+            checkTimer--;
+        }
+        else {
+            check.textContent = "";
+        }
+
+    }, 1000);
+
+    checkTimer = 3
+});
+
+thirdButtons.forEach (button3 => {
+    button3.addEventListener('click', function() {
+        page3.style.display = "none"
+        page4.style.display = "block"
+        timeLeft -= 15
+        var wrongInterval = setInterval(function () {
+            if (checkTimer > 0) {
+                check.textContent = "Wrong";
+                checkTimer--;
+            }
+            else {
+                check.textContent = "";
+            }
+    
+        }, 1000);
+        checkTimer = 3
+    });
+
+})
+
+
+fourthButton.addEventListener('click', function() {
+    page3.style.display = "none"
+    page4.style.display = "block"
+    var correctInterval = setInterval(function () {
+        if (checkTimer > 0) {
+            check.textContent = "Correct";
+            checkTimer--;
+        }
+        else {
+            check.textContent = "";
+        }
+
+    }, 1000);
+
+    checkTimer = 3
+});
 
 
    /*firstButton.addEventListener("click", function () {
