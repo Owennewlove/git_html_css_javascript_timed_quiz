@@ -30,7 +30,6 @@ var timeLeft = 75;
 
 
 
-
 function countdown() {
 
 
@@ -48,12 +47,28 @@ function countdown() {
 
         }
 
-
-
+        
 
 
 
     }, 1000);
+
+    
+
+    ninthButtons.forEach (button9 => {
+        button9.addEventListener('click', function() {
+            clearInterval(timeInterval);
+            localStorage.setItem("score", JSON.stringify(timeLeft));
+
+
+        });
+    });
+
+    tenthButton.addEventListener('click', function() {
+        clearInterval(timeInterval);
+        localStorage.setItem("score", JSON.stringify(timeLeft));
+    });
+
 }
 
 
@@ -244,6 +259,7 @@ ninthButtons.forEach (button9 => {
 
 
 tenthButton.addEventListener('click', function() {
+    clearInterval(countdown);
     page6.style.display = "none"
     page1.style.display = "block"
     var correctInterval = setInterval(function () {
