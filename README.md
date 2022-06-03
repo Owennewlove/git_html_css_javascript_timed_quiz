@@ -2,9 +2,9 @@
 
 ## Description
 
-I used Javascript to create functions, display prompts/confirms, and to use a for loop with if statements contained within it. The functions allowed me to randomly select uppercase letters, lowercase letters, special characters, and numbers. The prompt allowed a length of specified value to be created. The confirms created boolean values for the if statements to check. The for loop allowed me to repeat the process of checking the if statements until a satisfactory password length was obtained. The if statements within the for loop called upon the functions that selected the characters and placed them within the generated password. 
+The goal was to make a fully functioning timed quiz that shows, stores, and can call back scores obtained from completing the quiz. I used Html and Css to provide the basic framework of the quiz. Html properties such as basic semantic, classes, and ID's were used while css properties like margins, paddings, and display properties were used. Javascript allowed me to create a timer that counts down after the start button is clicked, to dislay different pages of the quiz based on events that happen in the website, and display the users score on completion of the quiz or if the timer reached 0. Functions, event listeners, intervals, if and else statements, local storage, etc. were all used in order to complete these requirements.
 
-The goal was to make a fully functioning randomized password generator that displayed prompts when the generate password button was clicked. This result was obtained through the process above.  
+
 
 
 
@@ -25,7 +25,7 @@ N/A
 
 The following link leads you to the github repository used when making this website:
 
-https://github.com/Owennewlove/git_javascript_password_generator.git
+https://github.com/Owennewlove/git_html_css_javascript_timed_quiz.git
 
 https://owennewlove.github.io/git_javascript_password_generator/
 
