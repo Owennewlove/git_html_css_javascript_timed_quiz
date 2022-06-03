@@ -30,6 +30,8 @@ var initialEnterText = document.getElementById("initialEnter");
 var initialsEl = document.getElementById("initials");
 var submitEl = document.getElementById("submitButton");
 var highscoreButton = document.getElementById("highscore")
+var clearScoresButton = document.getElementById("clearHighscores")
+var goBackEl = document.getElementById("goBackButton")
 var scores = [];
 
 
@@ -354,7 +356,22 @@ highscoreButton.addEventListener("click", function() {
 
 })
 
+
+
 init();
+
+clearScoresButton.addEventListener("click", function() {
+    localStorage.clear();
+
+})
+
+goBackEl.addEventListener("click", function() {
+    timeLeft = 75
+    page8.style.display = "none"
+    page1.style.display = "block"
+
+
+})
 
    /*firstButton.addEventListener("click", function () {
 
