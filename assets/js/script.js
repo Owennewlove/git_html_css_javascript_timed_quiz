@@ -49,7 +49,7 @@ function countdown() {
 
         if (timeLeft > 0) {
 
-            timer.textContent = ""
+            timerEl.textContent = ""
 
             timeLeft--;
 
@@ -58,7 +58,24 @@ function countdown() {
 
         }
 
-        
+        if (timeLeft <= 0) {
+            localStorage.setItem("score", JSON.stringify(timeLeft));
+    
+            page1.style.display = "none"
+            page2.style.display = "none"
+            page3.style.display = "none"
+            page4.style.display = "none"
+            page5.style.display = "none"
+            page6.style.display = "none"
+            page7.style.display = "block"
+            clearInterval(timeInterval);
+            finalScore.textContent = "Your score is: " + timeLeft
+            initialEnterText.textContent = "Please enter your initials to save your score"
+    
+    
+        };
+
+
 
 
 
@@ -66,8 +83,10 @@ function countdown() {
 
     
 
-    ninthButtons.forEach (button9 => {
-        button9.addEventListener('click', function() {
+
+
+    ninthButtons.forEach(button9 => {
+        button9.addEventListener('click', function () {
             clearInterval(timeInterval);
             localStorage.setItem("score", JSON.stringify(timeLeft));
 
@@ -75,7 +94,7 @@ function countdown() {
         });
     });
 
-    tenthButton.addEventListener('click', function() {
+    tenthButton.addEventListener('click', function () {
         clearInterval(timeInterval);
         localStorage.setItem("score", JSON.stringify(timeLeft));
     });
@@ -92,13 +111,13 @@ startEl.addEventListener('click', function () {
     page1.style.display = "none"
     page2.style.display = "block"
 
- 
+
 
 
 });
 
-firstButtons.forEach (button1 => {
-    button1.addEventListener('click', function() {
+firstButtons.forEach(button1 => {
+    button1.addEventListener('click', function () {
         page2.style.display = "none"
         page3.style.display = "block"
         timeLeft -= 15
@@ -110,14 +129,29 @@ firstButtons.forEach (button1 => {
             else {
                 check.textContent = "";
             }
-    
+
         }, 1000);
         checkTimer = 2
+        if (timeLeft <= 0) {
+            localStorage.setItem("score", JSON.stringify(timeLeft));
+    
+            page1.style.display = "none"
+            page2.style.display = "none"
+            page3.style.display = "none"
+            page4.style.display = "none"
+            page5.style.display = "none"
+            page6.style.display = "none"
+            page7.style.display = "block"
+            finalScore.textContent = "Your score is: " + timeLeft
+            initialEnterText.textContent = "Please enter your initials to save your score"
+    
+    
+        };
     });
 });
 
 
-secondButton.addEventListener('click', function() {
+secondButton.addEventListener('click', function () {
     page2.style.display = "none"
     page3.style.display = "block"
     var correctInterval = setInterval(function () {
@@ -134,8 +168,8 @@ secondButton.addEventListener('click', function() {
     checkTimer = 2
 });
 
-thirdButtons.forEach (button3 => {
-    button3.addEventListener('click', function() {
+thirdButtons.forEach(button3 => {
+    button3.addEventListener('click', function () {
         page3.style.display = "none"
         page4.style.display = "block"
         timeLeft -= 15
@@ -147,15 +181,29 @@ thirdButtons.forEach (button3 => {
             else {
                 check.textContent = "";
             }
-    
+
         }, 1000);
         checkTimer = 2
+        if (timeLeft <= 0) {
+            localStorage.setItem("score", JSON.stringify(timeLeft));
+    
+            page1.style.display = "none"
+            page2.style.display = "none"
+            page3.style.display = "none"
+            page4.style.display = "none"
+            page5.style.display = "none"
+            page6.style.display = "none"
+            page7.style.display = "block"
+            finalScore.textContent = "Your score is: " + timeLeft
+            initialEnterText.textContent = "Please enter your initials to save your score"
+    
+        };
     });
 
 })
 
 
-fourthButton.addEventListener('click', function() {
+fourthButton.addEventListener('click', function () {
     page3.style.display = "none"
     page4.style.display = "block"
     var correctInterval = setInterval(function () {
@@ -172,8 +220,8 @@ fourthButton.addEventListener('click', function() {
     checkTimer = 2
 });
 
-fifthButtons.forEach (button5 => {
-    button5.addEventListener('click', function() {
+fifthButtons.forEach(button5 => {
+    button5.addEventListener('click', function () {
         page4.style.display = "none"
         page5.style.display = "block"
         timeLeft -= 15
@@ -185,15 +233,32 @@ fifthButtons.forEach (button5 => {
             else {
                 check.textContent = "";
             }
-    
+
         }, 1000);
         checkTimer = 2
+        if (timeLeft <= 0) {
+            localStorage.setItem("score", JSON.stringify(timeLeft));
+    
+            page1.style.display = "none"
+            page2.style.display = "none"
+            page3.style.display = "none"
+            page4.style.display = "none"
+            page5.style.display = "none"
+            page6.style.display = "none"
+            page7.style.display = "block"
+            finalScore.textContent = "Your score is: " + timeLeft
+            initialEnterText.textContent = "Please enter your initials to save your score"
+
+    
+    
+        };
     });
+    
 
 })
 
 
-sixthButton.addEventListener('click', function() {
+sixthButton.addEventListener('click', function () {
     page4.style.display = "none"
     page5.style.display = "block"
     var correctInterval = setInterval(function () {
@@ -210,8 +275,8 @@ sixthButton.addEventListener('click', function() {
     checkTimer = 2
 });
 
-seventhButtons.forEach (button7 => {
-    button7.addEventListener('click', function() {
+seventhButtons.forEach(button7 => {
+    button7.addEventListener('click', function () {
         page5.style.display = "none"
         page6.style.display = "block"
         timeLeft -= 15
@@ -223,15 +288,30 @@ seventhButtons.forEach (button7 => {
             else {
                 check.textContent = "";
             }
-    
+
         }, 1000);
         checkTimer = 2
+        if (timeLeft <= 0) {
+            localStorage.setItem("score", JSON.stringify(timeLeft));
+    
+            page1.style.display = "none"
+            page2.style.display = "none"
+            page3.style.display = "none"
+            page4.style.display = "none"
+            page5.style.display = "none"
+            page6.style.display = "none"
+            page7.style.display = "block"
+            finalScore.textContent = "Your score is: " + timeLeft
+            initialEnterText.textContent = "Please enter your initials to save your score"
+    
+    
+        };
     });
 
 })
 
 
-eigthButton.addEventListener('click', function() {
+eigthButton.addEventListener('click', function () {
     page5.style.display = "none"
     page6.style.display = "block"
     var correctInterval = setInterval(function () {
@@ -248,8 +328,8 @@ eigthButton.addEventListener('click', function() {
     checkTimer = 2
 });
 
-ninthButtons.forEach (button9 => {
-    button9.addEventListener('click', function() {
+ninthButtons.forEach(button9 => {
+    button9.addEventListener('click', function () {
         page6.style.display = "none"
         page7.style.display = "block"
         timeLeft -= 15
@@ -261,7 +341,7 @@ ninthButtons.forEach (button9 => {
             else {
                 check.textContent = "";
             }
-    
+
         }, 1000);
         checkTimer = 2
         finalScore.textContent = "Your score is: " + timeLeft
@@ -271,7 +351,7 @@ ninthButtons.forEach (button9 => {
 })
 
 
-tenthButton.addEventListener('click', function() {
+tenthButton.addEventListener('click', function () {
     clearInterval(countdown);
     page6.style.display = "none"
     page7.style.display = "block"
@@ -291,59 +371,59 @@ tenthButton.addEventListener('click', function() {
     initialEnterText.textContent = "Please enter your initials to save your score"
 });
 
-function renderScores () {
+function renderScores() {
 
-      
-        // Render a new li for each todo
-        for (var i = 0; i < scores.length; i++) {
-          var score = scores[i];
-      
-          var li = document.createElement("li");
-          li.textContent = score;
-          li.setAttribute("data-index", i);
-          page8.appendChild(li);
 
-        }
+    // Render a new li for each todo
+    for (var i = 0; i < scores.length; i++) {
+        var score = scores[i];
+
+        var li = document.createElement("li");
+        li.textContent = score;
+        li.setAttribute("data-index", i);
+        page8.appendChild(li);
+
+    }
 
 }
 
 function init() {
     // Get stored todos from localStorage
     var storedScores = JSON.parse(localStorage.getItem("scores"));
-  
+
     // If todos were retrieved from localStorage, update the todos array to it
     if (storedScores !== null) {
-      scores = storedScores;
+        scores = storedScores;
     }
-  
+
     // This is a helper function that will render todos to the DOM
     renderScores();
 }
 
-function storeScores () {
+function storeScores() {
     localStorage.setItem("scores", JSON.stringify(scores));
 }
 
-submitEl.addEventListener("click", function(event) {
+submitEl.addEventListener("click", function (event) {
     event.preventDefault();
-  
+
     var initialsText = initialsEl.value.trim();
-  
+
     // Return from function early if submitted todoText is blank
     if (initialsText === "") {
-      return;
+        return;
     }
-  
+
     // Add new initials and score to todos array, clear the input
-    scores.push(initialsText + "    Score:     " +timeLeft);
+    scores.push(initialsText + "    Score:     " + timeLeft);
     initialsEl.value = "";
-  
+
     // Store updated scores in localStorage, re-render the list
     storeScores();
     renderScores();
 });
 
-highscoreButton.addEventListener("click", function() {
+highscoreButton.addEventListener("click", function () {
     page1.style.display = "none"
     page2.style.display = "none"
     page3.style.display = "none"
@@ -357,103 +437,108 @@ highscoreButton.addEventListener("click", function() {
 })
 
 
-
 init();
 
-clearScoresButton.addEventListener("click", function() {
+clearScoresButton.addEventListener("click", function () {
     localStorage.clear();
 
 })
 
-goBackEl.addEventListener("click", function() {
+goBackEl.addEventListener("click", function () {
     timeLeft = 75
     page8.style.display = "none"
     page1.style.display = "block"
+    timerEl.textContent = "Time: 75"
 
 
 })
 
-   /*firstButton.addEventListener("click", function () {
-
-        console.log("button 1 clicked")
-        var correctInterval = setInterval(function () {
-            if (checkTimer > 0) {
-                check.textContent = "Correct";
-                checkTimer--;
-            }
-            else {
-                check.textContent = "";
-            }
-
-        }, 1000);
-
-        checkTimer = 3
-
-         secondButton.addEventListener("click", function () {
-
-        var checkTimer = 3;
-        console.log("button 2 clicked")
-        var wrongInterval = setInterval(function () {
-            if (checkTimer > 0) {
-                check.textContent = "Wrong";
-                checkTimer--;
-            }
-            else {
-                check.textContent = "";
-            }
-
-        }, 1000);
-        checkTimer = 3
-        timeLeft -= 15;
-
-    });
-
-    thirdButton.addEventListener("click", function () {
-
-        console.log("button 1 clicked")
-        var wrongInterval = setInterval(function () {
-            if (checkTimer > 0) {
-                check.textContent = "Wrong";
-                checkTimer--;
-            }
-            else {
-                check.textContent = "";
-            }
-
-        }, 1000);
-
-        timeLeft -= 15;
-        checkTimer = 3;
-
-    });
-
-    fourthButton.addEventListener("click", function () {
-
-        console.log("button 4 clicked")
-
-        var wrongInterval = setInterval(function () {
-            if (checkTimer > 0) {
-                check.textContent = "Wrong";
-                checkTimer--;
-            }
-            else {
-                check.textContent = "";
-            }
-
-        }, 1000);
-
-        timeLeft -= 15;
-        checkTimer = 3;
-
-    });
 
 
 
 
-        setFifthButton;
-        setSixthButton;
-        setSeventhButton;
-        setEigthButton;
+
+/*firstButton.addEventListener("click", function () {
+
+     console.log("button 1 clicked")
+     var correctInterval = setInterval(function () {
+         if (checkTimer > 0) {
+             check.textContent = "Correct";
+             checkTimer--;
+         }
+         else {
+             check.textContent = "";
+         }
+
+     }, 1000);
+
+     checkTimer = 3
+
+      secondButton.addEventListener("click", function () {
+
+     var checkTimer = 3;
+     console.log("button 2 clicked")
+     var wrongInterval = setInterval(function () {
+         if (checkTimer > 0) {
+             check.textContent = "Wrong";
+             checkTimer--;
+         }
+         else {
+             check.textContent = "";
+         }
+
+     }, 1000);
+     checkTimer = 3
+     timeLeft -= 15;
+
+ });
+
+ thirdButton.addEventListener("click", function () {
+
+     console.log("button 1 clicked")
+     var wrongInterval = setInterval(function () {
+         if (checkTimer > 0) {
+             check.textContent = "Wrong";
+             checkTimer--;
+         }
+         else {
+             check.textContent = "";
+         }
+
+     }, 1000);
+
+     timeLeft -= 15;
+     checkTimer = 3;
+
+ });
+
+ fourthButton.addEventListener("click", function () {
+
+     console.log("button 4 clicked")
+
+     var wrongInterval = setInterval(function () {
+         if (checkTimer > 0) {
+             check.textContent = "Wrong";
+             checkTimer--;
+         }
+         else {
+             check.textContent = "";
+         }
+
+     }, 1000);
+
+     timeLeft -= 15;
+     checkTimer = 3;
+
+ });
+
+
+
+
+     setFifthButton;
+     setSixthButton;
+     setSeventhButton;
+     setEigthButton;
 
 
 
@@ -469,20 +554,20 @@ eigthButton.textContent = "square brackets"
 
 fifthButton.addEventListener("clicked", function () {
 
-    var wrongInterval = setInterval(function () {
-        if (checkTimer > 0) {
-            check.textContent = "Wrong";
-            checkTimer--;
-        }
-        else {
-            check.textContent = "";
-        }
+ var wrongInterval = setInterval(function () {
+     if (checkTimer > 0) {
+         check.textContent = "Wrong";
+         checkTimer--;
+     }
+     else {
+         check.textContent = "";
+     }
 
-    }, 1000);
-    console.log("fifth button clicked")
+ }, 1000);
+ console.log("fifth button clicked")
 
-    checkTimer = 3;
-    timeLeft -= 15;
+ checkTimer = 3;
+ timeLeft -= 15;
 
 
 
@@ -527,68 +612,68 @@ fifthButton.addEventListener("clicked", function () {
  </section> */
 
 
- /*const myQuestions = [
-    {
-        question: "Commonly used data types DO NOT include:",
+/*const myQuestions = [
+   {
+       question: "Commonly used data types DO NOT include:",
 
-        answers: {
-            1: "strings",
-            2: "boolean",
-            3: "alerts",
-            4: "numbers"
-        },
-    },
+       answers: {
+           1: "strings",
+           2: "boolean",
+           3: "alerts",
+           4: "numbers"
+       },
+   },
 
-    {
-        question: "The condition in an if/else statement is enclosed within ______. ",
+   {
+       question: "The condition in an if/else statement is enclosed within ______. ",
 
-        answers: {
+       answers: {
 
-            a: "quotes",
-            b: "curly brackets",
-            c: "parentheses",
-            d: "square brackets"
+           a: "quotes",
+           b: "curly brackets",
+           c: "parentheses",
+           d: "square brackets"
 
-        },
-    },
+       },
+   },
 
-    {
+   {
 
-        question: "Arrays in JavaScript can be used to store _____.",
+       question: "Arrays in JavaScript can be used to store _____.",
 
-        answers: {
+       answers: {
 
-            a: "numbers and strings",
-            b: "other arrays",
-            c: "booleans",
-            d: "all of the above"
-        },
+           a: "numbers and strings",
+           b: "other arrays",
+           c: "booleans",
+           d: "all of the above"
+       },
 
-    },
+   },
 
-    {
-        question: "String values must be enclosed within ______ when being assigned to variables.",
+   {
+       question: "String values must be enclosed within ______ when being assigned to variables.",
 
-        answers: {
-            a: "commas",
-            b: "curly brackets",
-            c: "quotes",
-            d: "parentheses"
-        },
-    },
+       answers: {
+           a: "commas",
+           b: "curly brackets",
+           c: "quotes",
+           d: "parentheses"
+       },
+   },
 
-    {
+   {
 
-        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+       question: "A very useful tool used during development and debugging for printing content to the debugger is:",
 
-        answers: {
+       answers: {
 
-            a: "JavaScript",
-            b: "terminal/bash",
-            c: "for loops",
-            d: "console log"
-        }
-    }
+           a: "JavaScript",
+           b: "terminal/bash",
+           c: "for loops",
+           d: "console log"
+       }
+   }
 
 
 
