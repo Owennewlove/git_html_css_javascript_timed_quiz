@@ -27,7 +27,7 @@ The following link leads you to the github repository used when making this webs
 
 https://github.com/Owennewlove/git_html_css_javascript_timed_quiz.git
 
-https://owennewlove.github.io/git_javascript_password_generator/
+https://owennewlove.github.io/git_html_css_javascript_timed_quiz/
 
     ```md
 ![alt text](./assets/images/Screen%20Shot%202022-06-03%20at%203.10.24%20PM.png)
