@@ -40,7 +40,7 @@ var timeLeft = 75;
 
 
 
-
+// creates the timer and stops it based on certain events
 function countdown() {
 
 
@@ -102,7 +102,7 @@ function countdown() {
 }
 
 
-
+//the following event listeners allow the effect of the page being switched when an answer is chosen
 startEl.addEventListener('click', function () {
     console.log("click")
 
@@ -370,7 +370,7 @@ tenthButton.addEventListener('click', function () {
     finalScore.textContent = "Your score is: " + timeLeft
     initialEnterText.textContent = "Please enter your initials to save your score"
 });
-
+//creates the scores that are listed on the highscore page
 function renderScores() {
 
 
