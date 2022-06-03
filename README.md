@@ -30,19 +30,23 @@ https://github.com/Owennewlove/git_javascript_password_generator.git
 https://owennewlove.github.io/git_javascript_password_generator/
 
     ```md
-![alt text](assets/Images/Screen%20Shot%202022-05-27%20at%208.43.35%20PM.png)
+![alt text](./assets/images/Screen%20Shot%202022-06-03%20at%203.10.24%20PM.png)
 
     ```
 
 
 ## Credits
 
-The following are links referenced when code refactoring this website. 
+The following are links referenced when creating this website. 
 
-Stack Overflow
- 1. https://stackoverflow.com/questions/3943772/how-do-i-shuffle-the-characters-in-a-string-in-javascript
+1. https://css-tricks.com/absolute-positioning-inside-relative-positioning/
+2. https://bobbyhadz.com/blog/javascript-addeventlistener-queryselectorall#:~:text=To%20add%20an%20event%20listener,each%20element%20in%20the%20collection.
+3. https://getbootstrap.com/docs/4.0/utilities/flex/
+4. https://www.w3schools.com/jsref/prop_win_localstorage.asp
+5. https://www.w3schools.com/html/html_form_input_types.asp
+6. https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear
 
-This linked helped me to create a shuffle event for the final password
+These links helped me do various things within the website such as absolute vs relative positioning, add the same event listener for multiple buttons, use flex properties to display in the center, send items into local storage, determine which input type I wanted, and finally clear the array within the local storage.
 
 
 
